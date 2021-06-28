@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Don\'t feed the \'pillar</string>
+
+    <!-- Strings for main page -->
+    <string name="title">Don\'t feed the \'pillar</string>
+    <string name="start_game">Game Start</string>
+    <string name="settings">settings</string>
+    <string name="stats">stats</string>
+
+    <!-- Placeholder string -->
+    <string name="hello_blank_fragment">I MUST NOT BE SEEN</string>
+</resources>
