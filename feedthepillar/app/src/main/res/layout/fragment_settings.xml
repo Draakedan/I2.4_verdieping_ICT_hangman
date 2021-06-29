@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SettingsFragment">
+
+    <TextView
+        android:id="@+id/settings_textview_title"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/settings" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/settings_textview_length_min"
+        android:text="@string/min_word_length"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/settings_edittext_length_min"
+        app:layout_constraintBottom_toBottomOf="@id/settings_edittext_length_min"
+        android:layout_marginLeft="32dp"
+        />
+
+    <EditText
+        android:id="@+id/settings_edittext_length_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="32dp"
+        android:inputType="number"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintLeft_toRightOf="@id/settings_textview_length_min"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_textview_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/settings_textview_length_max"
+        android:text="@string/max_word_length"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/settings_edittext_length_max"
+        app:layout_constraintBottom_toBottomOf="@id/settings_edittext_length_max"
+        android:layout_marginLeft="32dp"
+        />
+
+    <EditText
+        android:id="@+id/settings_edittext_length_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="32dp"
+        android:inputType="number"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintLeft_toRightOf="@id/settings_textview_length_max"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_edittext_length_min" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/settings_textview_language"
+        android:text="@string/language"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/settings_spinner_language"
+        app:layout_constraintBottom_toBottomOf="@id/settings_spinner_language"
+        android:layout_marginLeft="32dp"
+        />
+
+    <Spinner
+        android:id="@+id/settings_spinner_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="32dp"
+        android:inputType="number"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintLeft_toRightOf="@id/settings_textview_language"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_edittext_length_max" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/revert"
+        android:id="@+id/settings_button_revert"
+        app:layout_constraintTop_toBottomOf="@id/settings_spinner_language"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="32dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/settings_button_cancel"
+        android:text="@string/cancel"
+        app:layout_constraintTop_toBottomOf="@id/settings_button_revert"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintHorizontal_bias="0.9"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/settings_button_save"
+        android:text="@string/save"
+        app:layout_constraintTop_toTopOf="@id/settings_button_cancel"
+        app:layout_constraintBottom_toBottomOf="@id/settings_button_cancel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintHorizontal_bias="0.1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,14 @@
     <string name="settings">settings</string>
     <string name="stats">stats</string>
 
+    <!-- Strings for settings page -->
+    <string name="max_word_length">max word length</string>
+    <string name="min_word_length">min word length</string>
+    <string name="language">language</string>
+    <string name="revert">revert settings</string>
+    <string name="cancel">cancel</string>
+    <string name="save">save</string>
+
     <!-- Placeholder string -->
     <string name="hello_blank_fragment">I MUST NOT BE SEEN</string>
 </resources>
