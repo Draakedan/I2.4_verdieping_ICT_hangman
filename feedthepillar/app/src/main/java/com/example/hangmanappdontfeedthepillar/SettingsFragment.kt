@@ -72,6 +72,7 @@ class SettingsFragment : Fragment() {
     }
 
     private fun exitFragment() {
+        // return to title fragment
         val fragment = TitleFragment()
         val transaction = fragmentManager?.beginTransaction()
         transaction?.replace(R.id.main_fragment_holder, fragment)?.commit()

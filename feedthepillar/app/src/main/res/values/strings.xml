@@ -14,6 +14,14 @@
     <string name="revert">revert settings</string>
     <string name="cancel">Cancel</string>
     <string name="save">save</string>
+
+    <!-- Strings for stats page -->
+    <string name="wins">Wins:</string>
+    <string name="loses">Loses:</string>
+    <string name="average_attempts">Average attempts:</string>
+    <string name="average_word_length">Average word length</string>
+    <string name="reset">Reset</string>
+    <string name="back_to_title">Back to title</string>
     
     <!-- Toast message strings -->
     <string name="saving">Saving…</string>

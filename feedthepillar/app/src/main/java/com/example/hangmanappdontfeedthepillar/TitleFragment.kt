@@ -9,9 +9,9 @@ import android.widget.Button
 import android.widget.Toast
 
 class TitleFragment : Fragment() {
-    lateinit var startButton : Button
-    lateinit var settingsButton : Button
-    lateinit var statsButton : Button
+    private lateinit var startButton : Button
+    private lateinit var settingsButton : Button
+    private lateinit var statsButton : Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View? {
@@ -49,15 +49,16 @@ class TitleFragment : Fragment() {
     }
 
     private fun settings() {
-        // Go to settings fragment
+        // Open settings fragment
         val fragment = SettingsFragment()
         val transaction = fragmentManager?.beginTransaction()
         transaction?.replace(R.id.main_fragment_holder, fragment)?.commit()
     }
 
     private fun stats() {
-        Toast.makeText(context, R.string.button_pressed, Toast.LENGTH_SHORT).show()
-        Toast.makeText(context, R.string.not_implemented, Toast.LENGTH_SHORT).show()
-        //TODO: implement stats
+        // Open stats fragment
+        val fragment = StatsFragment()
+        val transaction = fragmentManager?.beginTransaction()
+        transaction?.replace(R.id.main_fragment_holder, fragment)?.commit()
     }
 }
