@@ -12,8 +12,20 @@
     <string name="min_word_length">min word length</string>
     <string name="language">language</string>
     <string name="revert">revert settings</string>
-    <string name="cancel">cancel</string>
+    <string name="cancel">Cancel</string>
     <string name="save">save</string>
+    
+    <!-- Toast message strings -->
+    <string name="saving">Saving…</string>
+    <string name="saved">Saved!</string>
+    <string name="save_fail">Saving failed…</string>
+    <string name="cancel_settings">Settings canceled</string>
+    <string name="revert_settings">Settings have been reset!</string>
+
+    <!-- Debug strings -->
+    <string name="button_pressed">Button Pressed</string>
+    <string name="not_implemented">feature is not yet implemented</string>
+    
 
     <!-- Placeholder string -->
     <string name="hello_blank_fragment">I MUST NOT BE SEEN</string>

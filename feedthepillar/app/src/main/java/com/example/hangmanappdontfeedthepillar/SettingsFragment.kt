@@ -8,24 +8,42 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.Toast
+import kotlin.concurrent.thread
 
 class SettingsFragment : Fragment() {
-    lateinit var revertButton : Button
-    lateinit var saveButton : Button
-    lateinit var cancelButton : Button
-    lateinit var languageSpinner : Spinner
-    lateinit var maxLengthEditText : EditText
-    lateinit var minLengthEditText : EditText
+    private lateinit var revertButton : Button
+    private lateinit var saveButton : Button
+    private lateinit var cancelButton : Button
+    private lateinit var languageSpinner : Spinner
+    private lateinit var maxLengthEditText : EditText
+    private lateinit var minLengthEditText : EditText
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View? {
-        //inflate the layout
+
+        // Inflate the layout
         val view = inflater.inflate(R.layout.fragment_settings, container, false)
-        return view;
+        inflateLayout(view)
+
+        // Add Button Listeners
+        revertButton.setOnClickListener {
+            revertSettings()
+        }
+
+        saveButton.setOnClickListener {
+            saveSettings()
+        }
+
+        cancelButton.setOnClickListener {
+            cancelSettings()
+        }
+
+        return view
     }
 
-    private fun InflateLayout (view : View) {
+    private fun inflateLayout (view : View) {
         revertButton = view.findViewById(R.id.settings_button_revert)
         saveButton = view.findViewById(R.id.settings_button_save)
         cancelButton = view.findViewById(R.id.settings_button_cancel)
@@ -33,4 +51,30 @@ class SettingsFragment : Fragment() {
         maxLengthEditText = view.findViewById(R.id.settings_edittext_length_max)
         minLengthEditText = view.findViewById(R.id.settings_edittext_length_min)
     }
+
+    private fun revertSettings() {
+        Toast.makeText(context, R.string.button_pressed, Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, R.string.not_implemented, Toast.LENGTH_SHORT).show()
+        //TODO: implement revert
+    }
+
+    private fun saveSettings() {
+        Toast.makeText(context, R.string.button_pressed, Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, R.string.not_implemented, Toast.LENGTH_SHORT).show()
+        //TODO: implement save settings
+        exitFragment()
+    }
+
+    private fun cancelSettings() {
+        // Toast appears after the fragment is closed, using Thread.sleep() doesn't solve the issue.
+        Toast.makeText(context, R.string.cancel_settings, Toast.LENGTH_SHORT).show()
+        exitFragment()
+    }
+
+    private fun exitFragment() {
+        val fragment = TitleFragment()
+        val transaction = fragmentManager?.beginTransaction()
+        transaction?.replace(R.id.main_fragment_holder, fragment)?.commit()
+    }
+
 }
