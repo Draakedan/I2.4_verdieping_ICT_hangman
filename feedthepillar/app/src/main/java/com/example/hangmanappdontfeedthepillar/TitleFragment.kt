@@ -43,9 +43,10 @@ class TitleFragment : Fragment() {
 
     private fun startGame()
     {
-        Toast.makeText(context, R.string.button_pressed, Toast.LENGTH_SHORT).show()
-        Toast.makeText(context, R.string.not_implemented, Toast.LENGTH_SHORT).show()
-        //TODO: implement start game
+        // Openm game fragment
+        val fragment = GameFragment()
+        val transaction = fragmentManager?.beginTransaction()
+        transaction?.replace(R.id.main_fragment_holder, fragment)?.commit()
     }
 
     private fun settings() {
